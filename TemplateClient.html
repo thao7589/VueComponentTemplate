@@ -1,0 +1,27 @@
+<!DOCTYPE f8component>
+
+<!-- Definition is how the system identifies your component -->
+<!-- className should be the same with Server.js file -->
+<definition>
+{
+    id: "Template",
+    label: "Template Component", 
+    renderable: true,
+    className: "TemplateServer",
+    dependencies: ["vue"]
+}
+</definition>
+
+<!-- These are the slots that show up when configuring your component -->
+<attributes></attributes>
+
+<!-- This controls how the attributes listed above display on the screen -->
+<attributes_layout></attributes_layout>
+
+<!-- These display rules can hide, make readonly, and make mandatory your attributes (defined above) based on conditions -->
+<attributes_display_rules></attributes_display_rules>
+
+<script>
+    const ComponentTemplate = require('Template/components/ComponentTemplate')
+    exports.component = ComponentUI.createVueComponent(ComponentTemplate, 4);
+</script>
